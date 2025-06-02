@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Jeu - Lunorite Unlimited</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/game.js" defer></script>
+</head>
+<body>
+<div class="background-overlay"></div>
+<header>
+    <h1>Lunorite Unlimited</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>   
+            <li><a href="game.html" class="active">Le Jeu</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <h2>Exploitation automatisée de Lunorite</h2>
+    <div id="lunorite-count" class="big-counter">Lunorite produite : 0</div>
+
+    <div class="main-layout">
+        <div class="left-panel">
+
+            <section class="autoprod section-spacing">
+                <h3>🏗️ Production automatique</h3>
+                <ul class="autoprod-list">
+                    <li>
+                        ⛏️ Mine souterraine<strong>Coût : <span id="prix-souterraine">50</span></strong>
+                        <button onclick="acheterMine('souterraine')">Acheter</button>
+                        <button onclick="ameliorerUsine('souterraine')">Améliorer</button>
+                    </li>
+                    <li>
+                        ☀️ Mine solaire<strong>Coût : <span id="prix-solaire">75</span></strong>
+                        <button onclick="acheterMine('solaire')">Acheter</button>
+                        <button onclick="ameliorerUsine('solaire')">Améliorer</button>
+                    </li>
+                    <li>
+                        🌱 Mine verte<strong>Coût : <span id="prix-verte">100</span></strong>
+                        <button onclick="acheterMine('verte')">Acheter</button>
+                        <button onclick="ameliorerUsine('verte')">Améliorer</button>
+                    </li>
+                </ul>
+
+
+                <div class="mine-stats">
+                    <p>🪓 Souterraines : <span id="nbSouterraines">0</span></p>
+                    <p>☀️ Solaires : <span id="nbSolaires">0</span></p>
+                    <p>🌱 Vertes : <span id="nbVertes">0</span></p>
+                </div>
+            </section>
+            <section class="stats section-spacing">
+                <h3>📊 Indicateurs</h3>
+                <ul class="stat-list">
+                    <li>🔥 Pollution : <span id="pollution-count">0</span></li>
+                    <li>🚀 Innovation : <span id="innovation-count">0</span></li>
+                    <li>🧭 Éthique : <span id="ethique-count">100</span></li>
+                </ul>
+            </section>
+
+        </div>
+        <div class="factory-panel">
+        <div class="factory-list section-spacing" id="factory-list">
+        </div>
+        <div class="grid-panel">
+            <div id="minimap">
+            <h3>🧱 Carte de production</h3>
+            <div id="grid" class="grid-display"></div>
+        </div>
+        <div id="alerts" class="alerts"></div>
+    </div>
+
+    
+</main>
+
+<footer>
+    <p>© 2025 - Lunorite Unlimited</p>
+</footer>
+</body>
+</html>
